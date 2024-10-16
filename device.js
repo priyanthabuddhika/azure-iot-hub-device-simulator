@@ -14,9 +14,15 @@ export function run(device) {
       "timestamp": date,
       "deviceId": device.deviceId,
       "data": JSON.stringify({
-        "power": Number.parseFloat((Math.random() * (100 - 75 + 1)) + 75).toFixed(2),
-        "voltage": Number.parseFloat((Math.random() * (40 - 30 + 1)) + 30).toFixed(2),
-        "current": Number.parseFloat((Math.random() * (90 - 60 + 1)) + 60).toFixed(2)
+        "power": Number((Math.random() * (100 - 75 + 1)) + 75).toFixed(2),
+        "voltage": Number((Math.random() * (40 - 30 + 1)) + 30).toFixed(2),
+        "current": Number((Math.random() * (90 - 60 + 1)) + 60).toFixed(2),
+        "temperature": {
+          "value": Number((Math.random() * (40 - 30 + 1)) + 30).toFixed(2),
+          "other": {
+            "absolute_value": Number((Math.random() * (40 - 30 + 1)) + 30).toFixed(2),
+          }
+        }
       })
     }
     );
